@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#37C1CC;
+    height: 70px;
+}
+.barra{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.marca{
+    min-width: 10%;
+    background-color: black;
+    color: white;
+    height: 70px;
+    text-align: center;
+}
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    visibility: hidden;
+}
+.usuario{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.img_inicio{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+
+i{
+    font-size: 30px;
+}
+.headerElement{
+    margin: 10px;
+}

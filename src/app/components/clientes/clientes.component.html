@@ -1,0 +1,79 @@
+<div class="contenedor">
+    
+    <app-sidebar class="sidebar"></app-sidebar>
+    
+    <div class="contenedorData">
+        <div class="row">
+            <div class="card">
+                <div class="iconCard">
+                    <i class="fas fa-address-book"></i>
+                </div>
+                <div class="dataCard">
+                    <div class="dataField">Clientes</div>
+                    <div class="dataNumber">{{ clientes.length }}</div>    
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconCard">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="dataCard">
+                    <div class="dataField">Trabajos</div>
+                    <div class="dataNumber">{{ clientes.length*2 }}</div>    
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconCard">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="dataCard">
+                    <div class="dataField">Inversión</div>
+                    <div class="dataNumber">{{ clientes.length*1000 | currency }}</div>    
+                </div>
+            </div>
+            <div class="card">
+                <div class="iconCard">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="dataCard">
+                    <div class="dataField">Ingreso</div>
+                    <div class="dataNumber">{{ clientes.length*12000 | currency }}</div>    
+                </div>
+            </div>
+        </div>
+
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Estructura</th>
+                        <th>RFC</th>
+                        <th>Domicilio</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of clientes; let i = index"> <!--*ngFor="let cliente of clientes; let i = index"-->
+                        <td > {{ i + 1}}  </td>
+                        <td>{{ cliente.nombre_cli}}</td>
+                        <td>{{ cliente.estr_juridica }}</td>
+                        <td>{{ cliente.rfc_cli }}</td>
+                        <td>{{ cliente.calle_cli + " " + cliente.num_call_cli + " " + cliente.c_p_cli + " " + cliente.id_localidades}}</td>
+                        <td>{{ cliente.correo_cli }}</td>
+                        <td>{{ cliente.tel_cli }}</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
